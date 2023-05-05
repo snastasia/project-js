@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Піцерія Domino's Pizza</title>
+  <link rel="shortcut icon" href="Pizza_pictures/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Styles/slick.css">
+  <link rel="stylesheet" href="./Styles/slick-theme.css">
+  <link rel="stylesheet" href="./Styles/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <a href="index.html"><img id="logo" src="Pizza_pictures/Carlo.png" alt="Логотип Папа Карло"></a>
+      <nav>
+        <ul>
+          <li>Конструктор піци</li>
+          <li>Картопляне меню</li>
+          <li>Салати</li>
+          <li>Напої</li>
+          <li>Доставка</li>
+          <li>Зворотній зв'язок</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="slider-pizza">
+      <img src="Pizza_pictures/slider-1.jpg" alt="">
+      <img src="Pizza_pictures/slider-2.jpg" alt="">
+      <img src="Pizza_pictures/slider-3.jpg" alt="">
+    </div>
+    <h1>Збери піцу своєї мрії</h1>
+    <sub>перетягни всi необхiднi iнгредiєнти</sub>
+    <div id="banner">Отримай знижку 30%!<br><button>Отримати</button></div>
+    <h3>Розмiр:</h3>
+    <form id='pizza' action="">
+
+      <label class="radio">
+        <input type="radio" class="radioIn" id="small" name="size" value="small-150">
+        <span class="fakeRadio"></span>
+        <span>Маленька</span>
+      </label>
+
+      <label class="radio">
+        <input type="radio" class="radioIn" id="mid" name="size" value="mid-200">
+        <span class="fakeRadio"></span>
+        <span>Середня</span>
+      </label>
+
+      <label class="radio">
+        <input type="radio" class="radioIn" id="big" name="size" value="big-250" checked="true">
+        <span class="fakeRadio"></span>
+        <span>Велика</span>
+      </label>
+
+    </form>
+    <div class="table-wrapper">
+      <div class="table">
+        <div style="z-index:20;" data-draggable="target" class="droptarget-main" ondrop="drop(event)"
+          ondragover="allowDrop(event)">
+        </div>
+        <div class="droptarget-keep" style="z-index:19;">
+
+        </div>
+        <img src="Pizza_pictures/klassicheskij-bortik.png" alt="Корж класичний">
+      </div>
+      <div class="ingridients">
+        <h3>Соуси:</h3>
+        <div id="parent-1" class="sauces-block">
+          <div id="first-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" id="sauceClassic"
+              data-parent-div="parent-1" src="Pizza_pictures/new/sous-klassicheskij_1557758736353.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="10"> <span>Кетчуп </span>10 грн</span>
+          <span class="btn-cancel" data-my-id="sauceClassic" data-block-id="first-block"
+            data-minus-price="parent-1">відмінити</span>
+        </div>
+        <div id="parent-2" class="sauces-block">
+          <div id="second-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" id="sauceBBQ"
+              data-parent-div="parent-2" src="Pizza_pictures/new/sous-bbq_155679418013.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="11"><span>BBQ </span> 11 грн</span>
+          <span class="btn-cancel" data-my-id="sauceBBQ" data-block-id="second-block"
+            data-minus-price="parent-2">відмінити</span>
+        </div>
+        <div id="parent-3" class="sauces-block">
+          <div id="third-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" id="sauceRikotta"
+              data-parent-div="parent-3" src="Pizza_pictures/new/sous-rikotta_1556623391103.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="15"><span>Рiкотта </span> 15 грн</span>
+          <span class="btn-cancel" data-my-id="sauceRikotta" data-block-id="third-block"
+            data-minus-price="parent-3">відмінити</span>
+        </div>
+        <h3>Топінги:</h3>
+        <div id="parent-4" class="top-block">
+          <div id="fourth-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" data-cheese="cheese"
+              id="moc1" data-parent-div="parent-4" src="Pizza_pictures/new/mocarela_1556623220308.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="15"><span>Сир звичайний </span> 15 грн</span>
+          <span class="btn-cancel" data-my-id="moc1" data-block-id="fourth-block"
+            data-minus-price="parent-4">відмінити</span>
+        </div>
+        <div id="parent-5" class="top-block">
+          <div id="fifth-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" data-cheese="cheese"
+              id="moc2" data-parent-div="parent-5" src="Pizza_pictures/new/mocarela_1556785182818.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="17"><span>Сир фета </span> 17 грн</span>
+          <span class="btn-cancel" data-my-id="moc2" data-block-id="fifth-block"
+            data-minus-price="parent-5">відмінити</span>
+        </div>
+        <div id="parent-6" class="top-block">
+          <div id="sixth-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" data-cheese="cheese"
+              id="moc3" data-parent-div="parent-6" src="Pizza_pictures/new/mocarela_1556785198489.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="15"><span>Моцарелла </span> 15 грн</span>
+          <span class="btn-cancel" data-my-id="moc3" data-block-id="sixth-block"
+            data-minus-price="parent-6">відмінити</span>
+        </div>
+        <div id="parent-7" class="top-block">
+          <div id="seventh-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" data-adds="adds"
+              id="telya" data-parent-div="parent-7" src="Pizza_pictures/new/telyatina_1556624025747.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="20"><span>Телятина </span> 20 грн</span>
+          <span class="btn-cancel" data-my-id="telya" data-block-id="seventh-block"
+            data-minus-price="parent-7">відмінити</span>
+        </div>
+        <div id="parent-8" class="top-block">
+          <div id="eighth-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" data-adds="adds"
+              id="vetch1" data-parent-div="parent-8" src="Pizza_pictures/new/vetchina.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="10"><span>Помідори </span> 10 грн</span>
+          <span class="btn-cancel" data-my-id="vetch1" data-block-id="eighth-block"
+            data-minus-price="parent-8">відмінити</span>
+        </div>
+        <div id="parent-9" class="top-block">
+          <div id="ninth-block" class="droptarget">
+            <img ondragstart="dragStart(event)" draggable="true" class="draggable common-lib" data-adds="adds"
+              id="vetch2" data-parent-div="parent-9" src="Pizza_pictures/new/vetchina_1556623556129.png" alt="">
+          </div>
+          <span class="common-lib-price" data-price="12"><span>Гриби </span> 12 грн</span>
+          <span class="btn-cancel" data-my-id="vetch2" data-block-id="ninth-block"
+            data-minus-price="parent-9">відмінити</span>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div class="price">
+        <p>Цiна:</p>
+        <p class="price__value"></p>
+      </div>
+      <div class="sauces">
+        <p>Соуси:</p>
+        <p class="sauces__value"></p>
+      </div>
+      <div class="topings">
+        <p>Топiнги:</p>
+        <p class="topings__value"></p>
+      </div>
+    </div>
+    <div class="warning">
+      Після формування твоєї ідеальної піци ти можеш скористатися знижкою нижче
+    </div>
+  </main>
+  <footer>
+    <h2>Пiдтвердь замовлення</h2>
+    <sub>введи данi i пiдтвердь замовлення</sub>
+    <form name="info" method="POST" action="./thank-you.html">
+      <div class="grid">
+        <label for="name">Ваше ім'я</label>
+        <input placeholder="Iм'я" name="name" type="text" data-val="\S">
+        <label for="phone">Номер телефону</label>
+        <input placeholder="+380505050500" name="phone" type="tel" data-val="^\+380\d{9}\b">
+        <label for="email">Електронна пошта</label>
+        <input placeholder="email@email.com" name="email" type="email"
+          data-val="\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b">
+        <input class='button' name="cancel" type="reset" value="Скинути">
+        <input class='button' name="btnSubmit" type="submit" value="Підтвердити замовлення >>">
+      </div>
+    </form>
+    <address>© 2002–2023 Мережа піцерій Domino!</address>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
