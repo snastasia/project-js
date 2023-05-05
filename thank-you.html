@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Дякуємо! Ваше замовлення прийнято!</title>
+  <link rel="stylesheet" href="./Styles/thank-you.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Дякуємо!</h1>
+    <p>Твоє замовлення прийнято!</p>
+    <div class="order-info"></div>
+    <a href="./index.html">Замовити ще</a>
+  </div>
+  <script>
+    const orderInfo = document.querySelector(".order-info");
+    orderInfo.innerHTML = "<span class='thank__you'>Ціна:</span> " + window.sessionStorage.getItem("Value");
+    orderInfo.innerHTML += "<br />";
+    orderInfo.innerHTML += "<span class='thank__you'>Соуси:</span> " + window.sessionStorage.getItem("Sauses");
+    orderInfo.innerHTML += "<br />";
+    orderInfo.innerHTML += "<span class='thank__you'>Інгрідієнти:</span> " + window.sessionStorage.getItem("Topings");
+    orderInfo.innerHTML += "<br />";
+    orderInfo.innerHTML += "<span class='thank__you'>Ім'я:</span> " + window.sessionStorage.getItem("Name");
+    orderInfo.innerHTML += "<br />";
+    orderInfo.innerHTML += "<span class='thank__you'>Телефон:</span> " + window.sessionStorage.getItem("Phone");
+    orderInfo.innerHTML += "<br />";
+    orderInfo.innerHTML += "<span class='thank__you'>Email:</span> " + window.sessionStorage.getItem("Email");
+
+  </script>
+</body>
+
+</html>
